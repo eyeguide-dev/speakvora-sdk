@@ -1,0 +1,54 @@
+# Speakvora
+
+> Text to speech, speech to text and voice-agent APIs, a checked phrase library, and one-time offline voice packs. Catalog voices cost $3 per million characters.
+
+Base URL: https://speakvora.com/api/v1  ·  Auth: header x-api-key  ·  Docs: https://speakvora.com/docs  ·  OpenAPI: https://speakvora.com/docs/openapi.yaml  ·  MCP: https://speakvora.com/api/mcp
+Status as of 2026-10-10: open; billing is live; prices are list prices.
+
+## What it is
+Speakvora sells three things: (1) a speech API (text to speech, speech to text, your own cloned voice), (2) one-time offline voice packs of checked phrases that play with no per-play fee, and (3) front-desk voice agents that book, move and cancel appointments, take messages, check order or prescription status through the customer's own endpoint, and email confirmations.
+
+## Prices (list, USD, re-checked monthly against nine providers' official pages: Amazon Polly, Google Cloud, OpenAI, Deepgram, ElevenLabs, Cartesia, Fish Audio, Inworld, Rime)
+- Catalog voices $3 per 1M characters (the lowest list price of the nine we compared); own voice $6 per 1M; speech to text $0.0015 per minute.
+- Agents $10 per 1,000 turns; front-desk agents $12 per 1,000 turns.
+- Free allowance: 100,000 characters that play stored library phrases (no card), 60 minutes of transcription, 200 agent turns. New text needs a card; the $10 monthly minimum includes 3.3M characters.
+- No subscription. Offline packs are a one-time purchase, $24 to $199.
+
+## Languages
+- Live text to speech: English (en), Spanish (es), French (fr), Hindi (hi) preview, Italian (it), Japanese (ja), Portuguese (pt), Chinese (zh).
+- Phrases in the checked library per language: English 7,730, Spanish 9,190, French 7,948, Hindi 19, Italian 1,556, Japanese 5,975, Portuguese 7,924, Chinese 6,013.
+- Non-English clips carry native_review_pending until reviewed.
+
+## Offline voice packs
+- 191 offline voice packs (en: 50, es: 37, fr: 21, ja: 32, pt: 32, zh: 19), one-time $24 to $199 each.
+- A pack is ready-generated M4A recordings plus manifest.json, phrases.csv and LICENSE.txt. Play inside your own apps, devices and services, offline, commercial use included. You may not resell or redistribute the files or use them to train speech models.
+
+## Speed (measured 2026-10-09, same code and server type as production; method at /performance)
+- New sentence on a paid account through the API: about 0.37 s (short), 0.48 s (medium), 0.80 s (long).
+- Stored sentence: about 0.14 s. Offline pack audio: instant, no generation.
+- First audio at the server inside the same cloud region: about 126 ms for a short sentence (82 ms on a larger GPU); 0.54 s to the first audio sentence over our WebSocket from a home connection.
+- Free accounts use the standard lane: a few seconds for a new sentence.
+- Competitor first-audio figures (vendor-stated and independently measured) are on /compare/tts-speed-and-price with sources.
+
+## Integrations
+- Node: npm install https://speakvora.com/sdk/speakvora-0.2.0.tgz   ·   Python: pip install https://speakvora.com/sdk/speakvora-0.2.0.tar.gz   (not on the public npm or PyPI registries yet)
+- MCP server (Claude, Cursor): https://speakvora.com/api/mcp with tools speak, list_voices, search_phrases; needs an API key to run.
+- OpenAPI: https://speakvora.com/docs/openapi.yaml
+
+## Voice agents
+- Tools: appointment booking, cancel and reschedule, find a booking by phone number, take messages, status lookups through the customer's endpoint, email confirmation, deposit payment links (Stripe), optional calendar feeds.
+- The agent says it is an automated assistant. It gathers and passes on information; it cannot change a customer's systems, refund or charge anyone.
+- Phone: the owner connects their own Twilio or Telnyx account; calls work with Twilio. Texting needs US carrier registration and is not generally available yet.
+
+## Honest limits
+- Not the fastest: the big streaming providers state lower time to first audio than our 0.54 s over WebSocket from a home connection (see /compare/tts-speed-and-price).
+- Voices are AI-generated, not human recordings.
+- A brand-new sentence takes about 0.4 to 0.8 seconds on a paid account and a few seconds on a free account; stored sentences take about 0.14 seconds.
+- Non-English clips are marked native_review_pending until a native speaker has reviewed them; Hindi is a preview.
+- No HIPAA or BAA claim. Voice agents are for information, booking and messages, not medical, legal or emergency advice.
+- Phone calls for agents run through the customer's Twilio account or ours; texting needs US carrier registration and is not generally available yet.
+- We have no published customer case studies yet.
+
+## Contact
+- support@eyeguide.ai
+- Terms, privacy and text-message terms: https://speakvora.com/legal

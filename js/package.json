@@ -1,0 +1,14 @@
+{
+  "name": "speakvora",
+  "version": "0.3.0",
+  "description": "Speakvora SDK: text to speech, speech to text, phrase library, offline packs, voice agents and live streaming.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": ["index.js", "index.d.ts", "README.md"],
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "keywords": ["text-to-speech", "tts", "speech-to-text", "voice", "ivr", "voice-agent"],
+  "homepage": "https://speakvora.com/docs",
+  "repository": { "type": "git", "url": "git+https://github.com/eyeguide-dev/speakvora.git", "directory": "js" },
+  "bugs": { "email": "support@eyeguide.ai" }
+}

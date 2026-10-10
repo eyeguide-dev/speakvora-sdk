@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.eyeguide-dev/speakvora",
+  "title": "Speakvora",
+  "description": "Text to speech, voice list and phrase search. Catalog voices $3 per million characters, free allowance.",
+  "version": "0.3.0",
+  "websiteUrl": "https://speakvora.com",
+  "repository": { "url": "https://github.com/eyeguide-dev/speakvora-sdk", "source": "github" },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://speakvora.com/api/mcp",
+      "headers": [
+        { "name": "x-api-key", "description": "Your Speakvora API key. Get a free key at https://speakvora.com/dashboard", "isRequired": true, "isSecret": true }
+      ]
+    }
+  ]
+}

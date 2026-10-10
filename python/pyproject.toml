@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "speakvora"
+version = "0.3.0"
+description = "Speakvora SDK: text to speech, speech to text, phrase library, offline packs, voice agents and live streaming."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["text-to-speech", "tts", "speech-to-text", "voice", "ivr", "voice-agent"]
+
+[project.optional-dependencies]
+stream = ["websockets"]
+
+[project.urls]
+Homepage = "https://speakvora.com/docs"
+Repository = "https://github.com/eyeguide-dev/speakvora"
+
+[tool.setuptools]
+packages = ["speakvora"]
