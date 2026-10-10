@@ -4,7 +4,7 @@ JavaScript and Python clients for [Speakvora](https://speakvora.com): text to sp
 
 - Site and docs: https://speakvora.com · https://speakvora.com/docs · OpenAPI: https://speakvora.com/docs/openapi.yaml
 - Base URL: `https://speakvora.com/api` · Auth: header `x-api-key` (get a free key at https://speakvora.com/dashboard)
-- Status: SDK version 0.3.0. Not on the public npm or PyPI registries yet; install as below.
+- Status: SDK version 0.3.0. Python: on PyPI (`pip install speakvora`). Node: not on npm yet; install as below.
 
 ## What Speakvora is
 
@@ -15,8 +15,8 @@ JavaScript and Python clients for [Speakvora](https://speakvora.com): text to sp
 ## Install
 
 ```bash
-# Python (from this repository)
-pip install "git+https://github.com/eyeguide-dev/speakvora-sdk.git#subdirectory=python"
+# Python (PyPI)
+pip install speakvora
 
 # Node (published tarball; works with npm, pnpm and yarn)
 npm install https://speakvora.com/sdk/speakvora-0.3.0.tgz
