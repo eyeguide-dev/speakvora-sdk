@@ -19,7 +19,7 @@ JavaScript and Python clients for [Speakvora](https://speakvora.com): text to sp
 pip install "git+https://github.com/eyeguide-dev/speakvora-sdk.git#subdirectory=python"
 
 # Node (published tarball; works with npm, pnpm and yarn)
-npm install https://speakvora.com/sdk/speakvora-0.2.0.tgz     # the 0.3.0 tarball replaces it after the next site publish
+npm install https://speakvora.com/sdk/speakvora-0.3.0.tgz
 # or use this repo's js/ folder directly: copy js/index.js (single file, no dependencies, Node 18+ or any browser with fetch)
 ```
 

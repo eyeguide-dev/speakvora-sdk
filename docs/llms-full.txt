@@ -20,7 +20,7 @@ Speakvora sells three things: (1) a speech API (text to speech, speech to text, 
 - Non-English clips carry native_review_pending until reviewed.
 
 ## Offline voice packs
-- 191 offline voice packs (en: 50, es: 37, fr: 21, ja: 32, pt: 32, zh: 19), one-time $24 to $199 each.
+- 253 offline voice packs (en: 50, es: 37, fr: 21, hi: 48, ja: 46, pt: 32, zh: 19), one-time $24 to $199 each.
 - A pack is ready-generated M4A recordings plus manifest.json, phrases.csv and LICENSE.txt. Play inside your own apps, devices and services, offline, commercial use included. You may not resell or redistribute the files or use them to train speech models.
 
 ## Speed (measured 2026-10-09, same code and server type as production; method at /performance)
@@ -31,7 +31,7 @@ Speakvora sells three things: (1) a speech API (text to speech, speech to text, 
 - Competitor first-audio figures (vendor-stated and independently measured) are on /compare/tts-speed-and-price with sources.
 
 ## Integrations
-- Node: npm install https://speakvora.com/sdk/speakvora-0.2.0.tgz   ·   Python: pip install https://speakvora.com/sdk/speakvora-0.2.0.tar.gz   (not on the public npm or PyPI registries yet)
+- Node: npm install https://speakvora.com/sdk/speakvora-0.3.0.tgz   ·   Python: pip install https://speakvora.com/sdk/speakvora-0.3.0.tar.gz   (not on the public npm or PyPI registries yet)
 - MCP server (Claude, Cursor): https://speakvora.com/api/mcp with tools speak, list_voices, search_phrases; needs an API key to run.
 - OpenAPI: https://speakvora.com/docs/openapi.yaml
 

@@ -16,7 +16,7 @@ stream = ["websockets"]
 
 [project.urls]
 Homepage = "https://speakvora.com/docs"
-Repository = "https://github.com/eyeguide-dev/speakvora"
+Repository = "https://github.com/eyeguide-dev/speakvora-sdk"
 
 [tool.setuptools]
 packages = ["speakvora"]

@@ -9,6 +9,6 @@
   "license": "MIT",
   "keywords": ["text-to-speech", "tts", "speech-to-text", "voice", "ivr", "voice-agent"],
   "homepage": "https://speakvora.com/docs",
-  "repository": { "type": "git", "url": "git+https://github.com/eyeguide-dev/speakvora.git", "directory": "js" },
+  "repository": { "type": "git", "url": "git+https://github.com/eyeguide-dev/speakvora-sdk.git", "directory": "js" },
   "bugs": { "email": "support@eyeguide.ai" }
 }
